@@ -2,10 +2,8 @@
 class Car:
     def __init__(self, _model: str, _vin: int, _numbers: str):
         self._model = _model
-        self._vin = _vin
-        self._numbers = _numbers
-        self.__is_valid_vin(_vin)
-        self.__is_valid_numbers(_numbers)
+        self._vin = self.__is_valid_vin(_vin)
+        self._numbers = self.__is_valid_numbers(_numbers)
 
     def __is_valid_vin(self, _vin_code):
         if not isinstance(_vin_code, int):
